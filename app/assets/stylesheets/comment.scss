@@ -1,0 +1,33 @@
+.comment-container{
+  background-color: #F6F7F9;
+  width: 100%;
+}
+
+.comment{
+  display: flex;
+}
+
+.new-comment-form{
+  display: block;
+}
+
+.comment-img-container{
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.comment-img-container img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.commentor-name{
+  color: #365899;
+  font-size: 12px;
+}
+
+.commentor-body{
+
+}

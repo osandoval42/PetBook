@@ -1,0 +1,33 @@
+.actual-friend-display {
+  display: flex;
+  padding: 10px;
+  background-color: #FFF;
+  border: 1px solid #bdc7d8;
+  width: 600px;
+  position: relative;
+  color: #365899;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.friend-photo-container{
+  width:96px;
+  height:96px;
+  background-color: #000;
+  border:4px solid #FFF;
+  border-radius: 2px;
+}
+
+.friend-photo-container img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.friend-title{
+  position: absolute;
+  top: 50px;
+  left: 325px;
+  cursor: pointer;
+}

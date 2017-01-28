@@ -1,0 +1,147 @@
+
+
+.actual-profile{
+  margin: auto;
+  width: 900px;
+  position: relative;
+}
+.profile-header{
+  position:relative;
+}
+
+.profile-photo-container{
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width:160px;
+  height:160px;
+  background-color: #000;
+  border:4px solid #FFF;
+  border-radius: 2px;
+}
+
+.profile-header img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.cover-photo-container{
+  width:900px;
+  height:150px;
+  position: absolute;
+  background-color: #000;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.user-profile-name{
+  z-index: 2;
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  color: #FFF;
+  text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  max-width: 275px;
+}
+
+.profile-nav-bar{
+  width: 900px;
+  height: 43px;
+  background-color: #FFF;
+  position: absolute;
+  top: 150px;
+  border: 1px solid #e9eaed;
+  display: flex;
+}
+
+.nav-flex{
+  display: flex;
+  margin-left:300px;
+  width: 600px;
+}
+
+.nav-flex:nth-child(1){
+  border-left: 1px solid #e9eaed;
+}
+
+.nav-btn-holder {
+  justify-content: space-between;
+  display: block;
+  padding: 15px 20px 15px 20px;
+  color: #365899;
+  cursor: pointer;
+  text-decoration: none;
+  border-right: 1px solid #e9eaed;
+}
+
+.nav-btn-holder a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #365899;
+}
+
+.main-profile {
+  position: absolute;
+  top: 220px;
+  width: 900px;
+}
+
+
+
+.friend-request-btn{
+  line-height: 26px;
+  padding: 0 10px;
+  background-color: #f6f7f9;
+  color: #4b4f56;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  border-color: rgba(0, 0, 0, .4);
+  border-radius: 2px;
+}
+
+.add-friend-btn{
+  line-height: 26px;
+  padding: 0 5px;
+  background-color: #f6f7f9;
+  color: #4b4f56;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  border-color: rgba(0, 0, 0, .4);
+  border-radius: 2px;
+}
+
+.friend-btn-container{
+  z-index: 2;
+  position: absolute;
+  top: 118px;
+  left:800px;
+}
+
+.cover-photo-btn{
+  position: absolute;
+  left: 9px;
+  top: 11px;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.profile-photo-btn{
+  color: #FFF;
+  font-size: 20px;
+  line-height: 10.0em;
+  position: absolute;
+  top: 140px;
+  left: 135px;
+  cursor: pointer;
+}

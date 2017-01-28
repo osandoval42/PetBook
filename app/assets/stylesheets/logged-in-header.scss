@@ -1,0 +1,77 @@
+.logged-in-header{
+  display:flex;
+  justify-content: space-between;
+  background-color: #3B5999;
+  color: #FFF;
+  padding: 12px 10px 5px 10px;
+  height: 42px;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.header-btn-divide{
+  width: 1px;
+  height: 18px;
+  display: block;
+  content: '';
+  background-color: #000;
+}
+
+.header-buttons{
+  display:flex;
+  margin-top:6px;
+  cursor: pointer;
+}
+
+.header-button{
+  display:flex;
+  font-family: -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+  background-color: transparent;
+  color: inherit;
+  display: inline-block;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  height: 27px;
+  line-height: 28px;
+  padding: 0 10px 1px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap
+}
+
+.search-bar-inputs{
+  margin-top: 8px;
+  margin-left: 15px;
+  display:flex;
+  justify-content: space-around;
+}
+
+
+
+.search-input{
+  height: 15px;
+  line-height: 18px;
+  padding: 3px 0 0;
+  text-shadow: none;
+  width: 240px;
+}
+
+.search-submit{
+  margin-left: 5px;
+  background-color: #4267b2;
+  border: 1px solid #29487d;
+  color: #FFF;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.search-bar{
+  margin-top: 2px;
+}
+
+.search-bar-inputs submit{}
