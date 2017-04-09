@@ -5,11 +5,13 @@ PetBook is a quick facebook mockup I made while teaching myself Ruby On Rails.  
 
 ## Features and Implementation
 
+![](https://github.com/osandoval42/petbook/blob/master/screenshots/facebook_mockup.png "PetBook")
+
 ### Friends
 
 Friendships is the join table modeling 2 users' friendships.  It contains two foreign key columns that join to `id` in user, called `requestor_id` and `requestee_id`.  A third column, `accepted` defines whether a row in this table represents a friendship or merely a friend request.  Thus all friends for a given user's profile can be pulled down by querying all rows for which `accepted` is true and said user's `id` matches either `requestor_id` or `requestee_id.  
 
-```
+```Ruby
   def friends
     binds = {id: self.id}
 
@@ -37,5 +39,17 @@ Friendships is the join table modeling 2 users' friendships.  It contains two fo
     return [] if friend_ids.empty?
 
     User.where(id: friend_ids)
+  end
+```
+### Comments
+
+Comments contain a foreign key `user_id` linking to `id` in `User` and a foreign key `post_id` corresponding to `id` in `Post`, in addition to the `body` of content.  Whenever a new feed is rendered, relevant posts are requested from the backend, in which comments are nested.  These posts stored in the `Post Store` until a new feed is rendered or the current session token is destroyed.  
+
+```Ruby
+class Api::PostsController < ApplicationController
+  def index
+    @posts = User.find(params[:user_id]).wall_posts #add include author and photo
+
+    render "api/posts/index"
   end
 ```
