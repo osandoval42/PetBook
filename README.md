@@ -9,7 +9,7 @@ PetBook is a quick facebook mockup I made while teaching myself Ruby On Rails.  
 
 ### Friends
 
-Friendships is the join table modeling 2 users' friendships.  It contains two foreign key columns that join to `id` in user, called `requestor_id` and `requestee_id`.  A third column, `accepted` defines whether a row in this table represents a friendship or merely a friend request.  Thus all friends for a given user's profile can be pulled down by querying all rows for which `accepted` is true and said user's `id` matches either `requestor_id` or `requestee_id.  
+`Friendships` is the join table modeling 2 users' friendships.  It contains two foreign key columns, `requestor_id` and `requestee_id`, that join to primary key `id` in `User`.  A third column, `accepted` defines whether a row in this table represents a friendship or merely a friend request.  Thus all friends for a given user's profile can be pulled down by querying all rows in `User` for which `accepted` is true and said user's `id` matches either `requestor_id` or `requestee_id`.  
 
 ```Ruby
   def friends
@@ -43,7 +43,7 @@ Friendships is the join table modeling 2 users' friendships.  It contains two fo
 ```
 ### Comments
 
-Comments contain a foreign key `user_id` linking to `id` in `User` and a foreign key `post_id` corresponding to `id` in `Post`, in addition to the `body` of content.  Whenever a new feed is rendered, relevant posts are requested from the backend, in which comments are nested.  These posts stored in the `Post Store` until a new feed is rendered or the current session token is destroyed.  
+In addition to the `body` of content, comments contain a foreign key `user_id` linking to `id` in `User` and a foreign key `post_id` corresponding to `id` in `Post`.  Whenever a new feed is rendered, each relevant post is requested from the backend, in which its comments are nested.  These posts are stored in the `PostStore` until a new feed is rendered or the current session token is destroyed.  
 
 ```Ruby
 class Api::PostsController < ApplicationController
