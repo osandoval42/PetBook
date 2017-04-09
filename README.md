@@ -53,3 +53,6 @@ class Api::PostsController < ApplicationController
     render "api/posts/index"
   end
 ```
+## Author
+
+Oscar Sandoval
